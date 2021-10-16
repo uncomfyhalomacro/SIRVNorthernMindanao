@@ -57,6 +57,7 @@ function recover_or_die!(agent, model)
     end
 end
 
+# TODO going to add the vaccination interval later
 function vaccinate!(agent, model)
     if agent.days_infected == 0 || agent.status == :S || agent.days_recovered ≥ 90
         if rand(model.rng) ≤ 0.08
