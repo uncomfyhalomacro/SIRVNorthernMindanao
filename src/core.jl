@@ -21,7 +21,8 @@ function model_initiation(;
     detection_time=14,
     reinfection_probability = 0.05,
     death_rate = 0.02,
-    vaccination_interval=14,
+    vaccination_interval=5,
+    vaccination_rate = 0.08,
     γS=[zeros(Int, length(Ns) - 1)..., 1],
     seed=0,
 )
@@ -49,6 +50,7 @@ function model_initiation(;
         detection_time,
         C,
         vaccination_interval,
+        vaccination_rate,
         death_rate,
     )
     space = GraphSpace(complete_digraph(C))
@@ -78,7 +80,7 @@ function generate_params(;
     max_travel_rate,
     infection_period=30,
     recovery_period=90,
-    reinfection_probability=0.05,
+    reinfection_probability=0.09,
     detection_time=14,
     death_rate=0.02,
     γS=[zeros(Int, C - 1)..., 1],
@@ -106,6 +108,7 @@ function generate_params(;
         β_det,
         δ,
         infection_period,
+        infection_period,
         recovery_period,
         reinfection_probability,
         detection_time,
@@ -116,5 +119,3 @@ function generate_params(;
     return params
 end
 
-params = generate_params(; C=8, max_travel_rate=0.01)
-model = model_initiation(; params...)

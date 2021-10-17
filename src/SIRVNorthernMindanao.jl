@@ -8,7 +8,7 @@ using Dates
 using Distributions: Poisson, DiscreteNonParametric
 using Downloads
 using DrWatson: @dict
-using Makie
+using GLMakie
 using Random
 
 # Includes
