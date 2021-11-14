@@ -1,4 +1,4 @@
-# Agent Based Modeling on COVID-19 disease progression and vaccination in Northern Mindanao
+# Agent Based Modeling on COVID-19 disease progression and vaccination in Ozamiz City
 
 This repository contains the progress and changes of my thesis.
 
