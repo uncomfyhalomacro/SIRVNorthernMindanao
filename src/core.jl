@@ -1,5 +1,4 @@
 using FileIO
-using LightGraphs
 
 # Defining the agent
 mutable struct Individual <: AbstractAgent
